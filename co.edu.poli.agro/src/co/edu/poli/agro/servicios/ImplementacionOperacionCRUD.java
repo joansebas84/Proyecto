@@ -138,12 +138,12 @@ public class ImplementacionOperacionCRUD implements OperacionCRUD, OperacionArch
             while ((linea = br.readLine()) != null) {
                 if (linea.trim().isEmpty()) continue;
                 String[] partes = linea.split("\\|");
-                String tipo       = partes[0];
-                int id            = Integer.parseInt(partes[1]);
-                String nombre     = partes[2];
-                double cantidad   = Double.parseDouble(partes[3]);
-                String unidad     = partes[4];
-                String fecha      = partes[5];
+                String tipo     = partes[0];
+                int id          = Integer.parseInt(partes[1]);
+                String nombre   = partes[2];
+                double cantidad = Double.parseDouble(partes[3]);
+                String unidad   = partes[4];
+                String fecha    = partes[5];
 
                 Producto p = null;
                 if (tipo.equals("FERTILIZANTE")) {

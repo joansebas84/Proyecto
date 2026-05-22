@@ -17,20 +17,6 @@ public class Abono extends Producto {
         this.observaciones = observaciones;
     }
 
-    @Override
-    public String resumen() {
-        return "[ABONO] " + toString() +
-               " | Origen: " + origen +
-               " | Descomp: " + tiempoDescomposicion + " dias" +
-               " | Obs: " + observaciones;
-    }
-
-    @Override
-    public double calcularStock() {
-        return getCantidadDisponible();
-    }
-
-    // Getters y Setters
     public String getOrigen() { return origen; }
     public void setOrigen(String origen) { this.origen = origen; }
 
@@ -41,4 +27,12 @@ public class Abono extends Producto {
 
     public String getObservaciones() { return observaciones; }
     public void setObservaciones(String observaciones) { this.observaciones = observaciones; }
+
+    @Override
+    public String toString() {
+        return "[ABONO] " + super.toString() +
+               " | Origen: " + origen +
+               " | Descomp: " + tiempoDescomposicion + " dias" +
+               " | Obs: " + observaciones;
+    }
 }

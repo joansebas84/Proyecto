@@ -15,22 +15,16 @@ public class Fertilizante extends Producto {
         this.observaciones = observaciones;
     }
 
-    @Override
-    public String resumen() {
-        return "[FERTILIZANTE] " + toString() +
-               " | Formula: " + tipoFormula +
-               " | Obs: " + observaciones;
-    }
-
-    @Override
-    public double calcularStock() {
-        return getCantidadDisponible();
-    }
-
-    // Getters y Setters
     public String getTipoFormula() { return tipoFormula; }
     public void setTipoFormula(String tipoFormula) { this.tipoFormula = tipoFormula; }
 
     public String getObservaciones() { return observaciones; }
     public void setObservaciones(String observaciones) { this.observaciones = observaciones; }
+
+    @Override
+    public String toString() {
+        return "[FERTILIZANTE] " + super.toString() +
+               " | Formula: " + tipoFormula +
+               " | Obs: " + observaciones;
+    }
 }

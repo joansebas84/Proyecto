@@ -17,20 +17,6 @@ public class Pesticida extends Producto {
         this.observaciones = observaciones;
     }
 
-    @Override
-    public String resumen() {
-        return "[PESTICIDA] " + toString() +
-               " | Plaga: " + plagaObjetivo +
-               " | Toxicidad: " + toxicidad +
-               " | Obs: " + observaciones;
-    }
-
-    @Override
-    public double calcularStock() {
-        return getCantidadDisponible();
-    }
-
-    // Getters y Setters
     public String getPlagaObjetivo() { return plagaObjetivo; }
     public void setPlagaObjetivo(String plagaObjetivo) { this.plagaObjetivo = plagaObjetivo; }
 
@@ -39,4 +25,12 @@ public class Pesticida extends Producto {
 
     public String getObservaciones() { return observaciones; }
     public void setObservaciones(String observaciones) { this.observaciones = observaciones; }
+
+    @Override
+    public String toString() {
+        return "[PESTICIDA] " + super.toString() +
+               " | Plaga: " + plagaObjetivo +
+               " | Toxicidad: " + toxicidad +
+               " | Obs: " + observaciones;
+    }
 }

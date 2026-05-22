@@ -1,0 +1,2 @@
+PESTICIDA|1|cry|5.0|l|07/08/2007|kata|7|algo
+ABONO|2|estiercol|2.0|Kg|09/04/25|animal|90|tener cuidado porq se daña facil
